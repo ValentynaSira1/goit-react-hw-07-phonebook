@@ -5,21 +5,21 @@ import { getContacts, addNewContact, deleteContactById } from "services/fetchCon
 export const fetchContacts = createAsyncThunk(
     'contacts/fetchAll',
     async () => {
-      const contacts = await getContacts();
-      return contacts;
+      const response = await getContacts();
+      return response;
     }
   );
 export const postNewContact = createAsyncThunk(
     'contacts/addContact',
     async (contact) => {
-      const contacts = await addNewContact(contact);
-      return contacts;
+      const response = await addNewContact(contact);
+      return response;
     }
   );
 export const deleteContact = createAsyncThunk(
     'contacts/deleteContact',
     async (id) => {
-      const contacts = await deleteContactById(id);
-      return contacts;
+      const response = await deleteContactById(id);
+      return response;
     }
   );
