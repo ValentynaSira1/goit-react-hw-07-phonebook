@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const URL = 'https://646ccfca7b42c06c3b2c12e8.mockapi.io/contacts';
+const URL = 'https://646e0e319c677e23218af732.mockapi.io/contacts/';
 
 export const getContacts = async () => {
   try {
     const response = await axios.get(URL);
-    return response;
+    return response.data;
   } catch (error) {
     console.log(error);
   }
